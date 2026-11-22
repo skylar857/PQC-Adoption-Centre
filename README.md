@@ -4,7 +4,7 @@ Which websites are already ready for quantum computers?
 
 A small measurement study of *hybrid post-quantum key exchange* (X25519MLKEM768) in HTTPS. I scanned 304 servers: the global top sites, plus hand-picked Indian government, university and bank/fintech sites. For each one I recorded whether it already uses the new quantum-resistant handshake, and I tried to work out why some do and some don't.
 
-Live site: *[add your Vercel link here]*
+
 
 
  Why I built this
