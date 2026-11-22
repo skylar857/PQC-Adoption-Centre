@@ -51,7 +51,7 @@ For each server, I make one normal TLS 1.3 connection with OpenSSL 3.5. I offer 
 
 7. Lessons from building it
 
-- A tool you have not checked will lie to you.** My first version labelled some normal servers as "no TLS 1.3" because OpenSSL prints classical and hybrid results in different formats and my code only read one of them. I only caught it by comparing the output with a manual `openssl s_client` run.
+- A tool you have not checked will lie to you. My first version labelled some normal servers as "no TLS 1.3" because OpenSSL prints classical and hybrid results in different formats and my code only read one of them. I only caught it by comparing the output with a manual `openssl s_client` run.
 - "Did not answer" is not "does not support".** Some hosts timed out on every test, including plain TLS 1.2. Counting them as "no TLS 1.3" would have distorted the percentages, so the scanner now treats them as unreachable and leaves them out of the denominator.
 - Do not trust data you typed from memory.** Several hostnames I added did not exist, and a DNS check caught them.
 - Small samples are noisy.** When I grew the Indian samples from about 16 to about 50 hosts per group, the numbers shrank and the confidence intervals tightened. Reporting the interval next to every percentage is the honest way to show that.
