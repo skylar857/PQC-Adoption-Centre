@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PQC Adoption Scanner | Hybrid post-quantum TLS measurement study</title>
+<meta name="description" content="A measurement study of hybrid post-quantum key exchange (X25519MLKEM768) adoption across Indian government, university and bank sites and global top sites.">
+<link rel="stylesheet" href="site/style.css">
+<style>
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero p.lead{max-width:40em;margin:14px auto 0;color:var(--mut);font-size:1.05rem}
+.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;pointer-events:auto}
+.btn{padding:10px 22px;border-radius:24px;border:1px solid var(--line);color:var(--fg);text-decoration:none;background:#0b0f1e99;transition:border-color .2s,transform .2s,background .2s}
+.btn:hover{border-color:var(--acc);transform:translateY(-2px)}
+.btn.pri{background:var(--acc);color:#06101c;border-color:var(--acc);font-weight:600}
+.stats,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:16px 0}
+a.stat,a.tile{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:border-color .25s,transform .15s}
+a.stat:hover,a.tile:hover{border-color:var(--acc)}
+.stat b{display:block;font:600 2.3rem/1.1 Georgia,serif;color:var(--acc);margin-bottom:6px}
+.stat span,.tile span{color:var(--mut);font-size:.92rem}
+.tile h3{margin-bottom:4px}
+#take li{margin:8px 0}
+footer{max-width:940px;margin:60px auto 0;padding:24px 18px 40px;border-top:1px solid var(--line);color:var(--mut);font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--acc);text-decoration:none;margin-left:14px}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="#top" class="on">Overview</a><a href="#findings">Findings</a><a href="#study">Study</a><a href="#explore">Explore</a><a href="site/">Open full site</a>
+</nav>
+
+<header class="hero" id="top">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div>
+    <h1>Which servers are already quantum-ready?</h1>
+    <p class="lead">A measurement study of hybrid post-quantum key exchange (X25519MLKEM768) in TLS 1.3 across Indian government, university and bank sites, compared with the global top sites.</p>
+    <div class="cta">
+      <a class="btn pri" href="site/">Explore the interactive study</a>
+      <a class="btn" href="#findings">Key findings</a>
+      <a class="btn" href="https://github.com/skylar857/pqc-adoption-scanner" target="_blank" rel="noopener">Source code</a>
+    </div>
+    <p class="small" style="margin-top:18px"><span class="dot hy"></span>negotiates hybrid PQC &nbsp; <span class="dot cl"></span>classical only &nbsp; Move your pointer over the network.</p>
+  </div>
+</header>
+
+<section id="findings">
+  <h2>Key findings</h2>
+  <p class="sub">All figures are computed from the latest scan. Select a card to open the matching section.</p>
+  <div class="stats rv" id="stats"><p class="sub">Loading...</p></div>
+  <div class="card rv"><ul id="take"></ul></div>
+</section>
+
+<section id="study">
+  <h2>The study at a glance</h2>
+  <div class="steps">
+    <div class="card rv"><h3>Question</h3><p>How many HTTPS servers already negotiate the hybrid group X25519MLKEM768, and does adoption differ between sectors?</p></div>
+    <div class="card rv"><h3>Method</h3><p>One TLS 1.3 handshake per host with OpenSSL 3.5, offering the hybrid first and X25519 as fallback. Control handshakes separate real non-support from failed connections.</p></div>
+    <div class="card rv"><h3>Scope</h3><p id="scope">A hand-selected sample of Indian sites plus the global top list. Not a random sample, so results describe this sample only.</p></div>
+  </div>
+</section>
+
+<section id="explore">
+  <h2>Explore</h2>
+  <div class="grid rv">
+    <a class="tile" href="site/#method"><h3>Method</h3><span>How the scan works and what hybrid costs on the wire.</span></a>
+    <a class="tile" href="site/#results"><h3>Results</h3><span>Adoption by category with confidence intervals.</span></a>
+    <a class="tile" href="site/#benchmark"><h3>Benchmark</h3><span>ML-KEM-768 vs X25519 speed and sizes.</span></a>
+    <a class="tile" href="site/#providers"><h3>Providers</h3><span>Which CDNs and edge providers serve hybrid hosts.</span></a>
+    <a class="tile" href="site/#hosts-sec"><h3>Hosts</h3><span>Search every scanned host and its status.</span></a>
+    <a class="tile" href="site/#limits"><h3>Limitations</h3><span>What this study can and cannot show.</span></a>
+  </div>
+</section>
+
+<footer>
+  <span>Anirudh V &middot; Chennai Institute of Technology &middot; Independent research project</span>
+  <span><a href="https://github.com/skylar857" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/anirudh-v-4b835b289/" target="_blank" rel="noopener">LinkedIn</a></span>
+</footer>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const f1 = n => Math.round(n * 10) / 10;
+const LABEL = {global: "Global top sites", india_bank: "Indian banks / fintech", india_gov: "Indian government", india_univ: "Indian universities"};
+const EDGE = ["Cloudflare", "CloudFront", "Akamai", "Google", "Meta", "Fastly"];
+const load = async p => { try { const r = await fetch(p); if (r.ok) return await r.json(); } catch (e) {} return null; };
+const sum = (o, ks) => ks.reduce((a, k) => a + (o[k] || 0), 0);
+
+// Interactive network background: pointer attracts links; node colours follow the measured adoption rate.
+let hyRate = .5;
+(function () {
+  const c = $("#net"), x = c.getContext("2d"); let w, h, pts = [], m = {x: -999, y: -999};
+  function size() {
+    w = c.width = c.clientWidth; h = c.height = c.clientHeight;
+    pts = Array.from({length: Math.round(w * h / 14000)}, () => ({x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3, hy: Math.random() < hyRate}));
+  }
+  size(); addEventListener("resize", size);
+  c.parentElement.addEventListener("pointermove", e => { const r = c.getBoundingClientRect(); m.x = e.clientX - r.left; m.y = e.clientY - r.top; });
+  c.parentElement.addEventListener("pointerleave", () => { m.x = m.y = -999; });
+  window.recolour = () => pts.forEach(p => { p.hy = Math.random() < hyRate; });
+  (function f() {
+    x.clearRect(0, 0, w, h);
+    for (const p of pts) {
+      if (!reduce) { p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > w) p.vx *= -1; if (p.y < 0 || p.y > h) p.vy *= -1; }
+      const dm = Math.hypot(p.x - m.x, p.y - m.y);
+      if (dm < 150) { x.strokeStyle = "rgba(127,231,255," + (1 - dm / 150) * .6 + ")"; x.beginPath(); x.moveTo(p.x, p.y); x.lineTo(m.x, m.y); x.stroke(); }
+      x.fillStyle = p.hy ? "#7fe7ff" : "#d9a05b"; x.beginPath(); x.arc(p.x, p.y, dm < 150 ? 3.2 : 2.2, 0, 7); x.fill();
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const d = Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y);
+      if (d < 110) { x.strokeStyle = "rgba(111,125,255," + (1 - d / 110) * .22 + ")"; x.beginPath(); x.moveTo(pts[i].x, pts[i].y); x.lineTo(pts[j].x, pts[j].y); x.stroke(); }
+    }
+    if (!reduce) requestAnimationFrame(f);
+  })();
+})();
+
+function count(el, to, pre, suf) {
+  if (reduce) { el.textContent = pre + f1(to) + suf; return; }
+  let t0; (function f(t) { t0 = t0 || t; const k = Math.min((t - t0) / 1400, 1); el.textContent = pre + f1(to * (1 - Math.pow(1 - k, 3))) + suf; if (k < 1) requestAnimationFrame(f); })(performance.now());
+}
+
+Promise.all([load("dashboard/summary.json"), load("dashboard/benchmark.json"), load("dashboard/providers.json")]).then(([s, b, p]) => {
+  if (!s) { $("#stats").innerHTML = '<p class="sub">No data found. Run the scan and analysis scripts first.</p>'; return; }
+  const o = s.overall, cats = Object.entries(s.categories);
+  hyRate = o.pct_of_reachable / 100; window.recolour();
+  $("#scope").textContent = o.total + " hosts scanned (" + o.reachable + " reachable): top global sites plus hand-selected Indian government, university and bank sites. Not a random sample, so results describe this sample only.";
+
+  const lowest = cats.slice().sort((a, b) => a[1].pct_of_reachable - b[1].pct_of_reachable)[0];
+  const others = cats.filter(c => c[0] !== lowest[0]);
+  const separate = lowest[1].ci95[1] < Math.min(...others.map(c => c[1].ci95[0]));
+  const cards = [{k: "#results", num: o.pct_of_reachable, pre: "", suf: "%", txt: "of " + o.reachable + " reachable hosts negotiate hybrid PQC (95% CI " + o.ci95[0] + "-" + o.ci95[1] + "%)"},
+                 {k: "#results", num: lowest[1].pct_of_reachable, pre: "", suf: "%", txt: (LABEL[lowest[0]] || lowest[0]) + ": the lowest category (95% CI " + lowest[1].ci95[0] + "-" + lowest[1].ci95[1] + "%)"}];
+  const takes = ["<b>" + o.pqc_hybrid + " of " + o.reachable + "</b> reachable hosts negotiated X25519MLKEM768 (" + o.pct_of_reachable + "%, 95% CI " + o.ci95[0] + "-" + o.ci95[1] + "%).",
+    "<b>" + (LABEL[lowest[0]] || lowest[0]) + "</b> had the lowest adoption (" + lowest[1].pct_of_reachable + "%). " + (separate ? "Its confidence interval does not overlap any other category." : "Its confidence interval overlaps other categories, so the difference is not conclusive.")];
+  if (p) {
+    const eA = sum(p.overall.all_by_provider, EDGE), eH = sum(p.overall.hybrid_by_provider, EDGE);
+    cards.push({k: "#providers", html: eH + "/" + eA, txt: "hosts behind six major edge providers negotiate hybrid PQC"});
+    takes.push("Of the <b>" + eA + "</b> hosts identified behind Cloudflare, CloudFront, Akamai, Google, Meta or Fastly, <b>" + eH + "</b> negotiated the hybrid group. Header-based attribution is a lower bound, so the true share behind such providers may be higher.");
+  }
+  if (b) {
+    const dc = b.handshake_cost_us.hybrid_client - b.handshake_cost_us.x25519_client, z = b.sizes_bytes;
+    cards.push({k: "#benchmark", num: dc, pre: "+", suf: " µs", txt: "estimated extra client CPU per handshake for the hybrid"});
+    takes.push("The hybrid adds about <b>" + (z.hybrid_x25519mlkem768.client_share - z.x25519.client_share) + " bytes</b> to the client key share and <b>" + (z.hybrid_x25519mlkem768.server_share - z.x25519.server_share) + " bytes</b> to the server's. The size increase, not CPU time, is the practical cost.");
+  }
+  $("#stats").innerHTML = cards.map((c, i) => '<a class="stat tilt" href="site/' + c.k + '"><b id="st' + i + '">' + (c.html || "") + "</b><span>" + c.txt + "</span></a>").join("");
+  cards.forEach((c, i) => { if (c.num !== undefined) count($("#st" + i), c.num, c.pre, c.suf); });
+  $("#take").innerHTML = takes.map(t => "<li>" + t + "</li>").join("");
+
+  // Pointer tilt on cards
+  $$(".tilt").forEach(el => {
+    if (reduce) return;
+    el.addEventListener("pointermove", e => { const r = el.getBoundingClientRect(); el.style.transform = "perspective(600px) rotateX(" + (-(e.clientY - r.top) / r.height + .5) * 8 + "deg) rotateY(" + ((e.clientX - r.left) / r.width - .5) * 8 + "deg)"; });
+    el.addEventListener("pointerleave", () => { el.style.transform = ""; });
+  });
+});
+
+// Reveals and nav highlight
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold: .12});
+$$(".rv").forEach(e => reduce ? e.classList.add("in") : io.observe(e));
+setTimeout(() => $$(".rv").forEach(e => e.classList.add("in")), 2500);
+const links = $$("#nav a");
+new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id)); }), {rootMargin: "-45% 0px -50% 0px"})
+  .observe($("#top")), ["#findings", "#study", "#explore"].forEach(id => new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === id)); }), {rootMargin: "-45% 0px -50% 0px"}).observe($(id)));
+</script>
+</body>
+</html>

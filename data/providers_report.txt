@@ -1,0 +1,60 @@
+﻿
+OVERALL: 264 reachable, 137 hybrid, 56.2% of hybrid hosts via an identified provider
+   hybrid via other/unidentified     46
+   hybrid via Cloudflare             25
+   hybrid via no_http_response       14
+   hybrid via CloudFront             14
+   hybrid via Akamai                 11
+   hybrid via Google                 10
+   hybrid via Meta                   6
+   hybrid via Fastly                 6
+   hybrid via Azure Front Door       3
+   hybrid via AWS                    1
+   hybrid via Sucuri                 1
+
+global: 118 reachable, 70 hybrid, 64.3% of hybrid hosts via an identified provider
+   hybrid via other/unidentified     16
+   hybrid via Cloudflare             14
+   hybrid via Google                 10
+   hybrid via no_http_response       9
+   hybrid via Meta                   6
+   hybrid via Fastly                 6
+   hybrid via CloudFront             5
+   hybrid via Akamai                 3
+   hybrid via Azure Front Door       1
+
+india_bank: 47 reachable, 32 hybrid, 62.5% of hybrid hosts via an identified provider
+   hybrid via Cloudflare             11
+   hybrid via other/unidentified     11
+   hybrid via CloudFront             5
+   hybrid via Akamai                 3
+   hybrid via AWS                    1
+   hybrid via no_http_response       1
+
+india_gov: 49 reachable, 26 hybrid, 38.5% of hybrid hosts via an identified provider
+   hybrid via other/unidentified     13
+   hybrid via Akamai                 5
+   hybrid via CloudFront             4
+   hybrid via no_http_response       3
+   hybrid via Azure Front Door       1
+
+india_univ: 50 reachable, 9 hybrid, 22.2% of hybrid hosts via an identified provider
+   hybrid via other/unidentified     6
+   hybrid via Azure Front Door       1
+   hybrid via no_http_response       1
+   hybrid via Sucuri                 1
+
+Hybrid rate by provider (all categories):
+   other/unidentified     126 hosts,  46 hybrid (37%)
+   no_http_response        54 hosts,  14 hybrid (26%)
+   Cloudflare              25 hosts,  25 hybrid (100%)
+   CloudFront              14 hosts,  14 hybrid (100%)
+   Akamai                  11 hosts,  11 hybrid (100%)
+   Google                  10 hosts,  10 hybrid (100%)
+   Azure Front Door         8 hosts,   3 hybrid (38%)
+   Meta                     6 hosts,   6 hybrid (100%)
+   Fastly                   6 hosts,   6 hybrid (100%)
+   AWS                      3 hosts,   1 hybrid (33%)
+   Sucuri                   1 hosts,   1 hybrid (100%)
+
+Saved data/providers.csv and dashboard/providers.json

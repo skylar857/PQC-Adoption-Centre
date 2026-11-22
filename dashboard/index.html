@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PQC Adoption Scanner</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#666;--card:#f5f5f7;--line:#ddd;--acc:#2a6fdb;--ok:#1a8f4c;--warn:#c27a00;--bad:#c0392b}
+@media (prefers-color-scheme:dark){:root{--bg:#111318;--fg:#e8e8ea;--mut:#9aa0a6;--card:#1b1e25;--line:#2d313a;--acc:#6aa3ff;--ok:#4cc27f;--warn:#e0a030;--bad:#e5675a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,Segoe UI,sans-serif}
+main{max-width:920px;margin:0 auto;padding:28px 18px 60px}
+h1{font-size:1.7rem;margin:0 0 4px}h2{font-size:1.2rem;margin:34px 0 10px}
+.sub{color:var(--mut);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:10px 0}
+.big{font-size:2.4rem;font-weight:700;color:var(--acc)}
+.row{display:grid;grid-template-columns:170px 1fr 190px;gap:10px;align-items:center;margin:10px 0}
+.track{position:relative;height:18px;background:var(--line);border-radius:9px;overflow:hidden}
+.fill{position:absolute;left:0;top:0;bottom:0;background:var(--acc)}
+.ci{position:absolute;top:6px;height:6px;background:var(--fg);opacity:.55;border-radius:3px}
+.small{font-size:.85rem;color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+.wrap{overflow-x:auto}
+input,select{padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg);margin:0 6px 8px 0}
+.pqc_hybrid{color:var(--ok);font-weight:600}.classical_only{color:var(--warn)}
+.pqc_offer_rejected,.no_tls13{color:var(--bad)}.unreachable,.timeout{color:var(--mut)}
+ul{padding-left:20px}
+@media (max-width:640px){.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<h1>PQC Adoption Scanner</h1>
+<p class="sub">How many HTTPS servers negotiate the hybrid post-quantum key exchange X25519MLKEM768? Indian government, university and bank sites vs. global top sites.</p>
+
+<div class="card"><div class="big" id="headline">...</div><div id="headsub" class="small"></div></div>
+
+<h2>Adoption by category</h2>
+<p class="small">Bar = share of reachable hosts that negotiated hybrid PQC. Thin black line = 95% Wilson confidence interval.</p>
+<div id="bars"></div>
+
+<h2>Handshake outcomes</h2>
+<div class="card wrap"><table id="outcomes"></table></div>
+
+<h2>Cost of ML-KEM-768 vs X25519</h2>
+<div class="card wrap"><table id="bench"></table><p class="small" id="benchmeta"></p></div>
+<div class="card wrap"><table id="sizes"></table></div>
+
+<h2>All scanned hosts</h2>
+<input id="q" placeholder="Search domain"><select id="cat"></select><select id="st"></select>
+<div class="card wrap"><table id="hosts"></table></div>
+
+<h2>Method and limitations</h2>
+<div class="card"><ul>
+<li>Each host gets one TLS 1.3 handshake with OpenSSL 3.5, offering X25519MLKEM768 first and X25519 as fallback. The group the server picks is recorded. If the hybrid offer fails, a classical-only control handshake is tried.</li>
+<li>Percentages use reachable hosts as the denominator. Unreachable and timed-out hosts are reported separately.</li>
+<li>Sample sizes for the Indian categories are small, so the confidence intervals are wide. Most differences between categories are not statistically significant.</li>
+<li>This measures server-side support at one point in time from one vantage point (Chennai, India). It does not measure browser adoption.</li>
+<li>Many sites get hybrid support from a CDN in front of them, so a hybrid result does not always mean the site operator enabled it.</li>
+<li>Only the key exchange is hybrid. Certificates and signatures are still classical.</li>
+<li>The Tranco top list includes some infrastructure domains that are not websites.</li>
+<li>Handshake cost rows are estimates built from <code>openssl speed</code> results, run in Docker on WSL2.</li>
+</ul></div>
+</main>
+<script>
+const LABEL={global:"Global top sites",india_bank:"Indian banks / fintech",india_gov:"Indian government",india_univ:"Indian universities"};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const f1=n=>(Math.round(n*10)/10).toString();
+Promise.all([fetch("summary.json").then(r=>r.json()),fetch("benchmark.json").then(r=>r.json())]).then(([s,b])=>{
+ const o=s.overall;
+ document.getElementById("headline").textContent=f1(o.pct_of_reachable)+"% hybrid PQC";
+ document.getElementById("headsub").textContent=o.pqc_hybrid+" of "+o.reachable+" reachable hosts ("+o.total+" scanned). Snapshot: "+s.scanned_at.slice(0,10)+".";
+ let bars="";
+ for(const [k,v] of Object.entries(s.categories)){
+  bars+='<div class="row"><div>'+esc(LABEL[k]||k)+'</div><div class="track"><div class="fill" style="width:'+v.pct_of_reachable+'%"></div><div class="ci" style="left:'+v.ci95[0]+'%;width:'+(v.ci95[1]-v.ci95[0])+'%"></div></div><div class="small">'+f1(v.pct_of_reachable)+'% ('+v.pqc_hybrid+'/'+v.reachable+') CI '+v.ci95[0]+'-'+v.ci95[1]+'%</div></div>';
+ }
+ document.getElementById("bars").innerHTML=bars;
+ const cols=["pqc_hybrid","classical_only","pqc_offer_rejected","no_tls13","unreachable","timeout"];
+ let t="<tr><th>Category</th>"+cols.map(c=>"<th>"+c+"</th>").join("")+"</tr>";
+ for(const [k,v] of Object.entries(s.categories)){t+="<tr><td>"+esc(LABEL[k]||k)+"</td>"+cols.map(c=>"<td>"+v[c]+"</td>").join("")+"</tr>";}
+ document.getElementById("outcomes").innerHTML=t;
+ const h=b.handshake_cost_us;
+ document.getElementById("bench").innerHTML="<tr><th>Per-side cost (microseconds, estimated)</th><th>X25519</th><th>ML-KEM-768</th><th>Hybrid</th></tr><tr><td>Client</td><td>"+h.x25519_client+"</td><td>"+h.ml_kem_768_client+"</td><td>"+h.hybrid_client+"</td></tr><tr><td>Server</td><td>"+h.x25519_server+"</td><td>"+h.ml_kem_768_server+"</td><td>"+h.hybrid_server+"</td></tr>";
+ document.getElementById("benchmeta").textContent=b.meta.openssl+" | "+b.meta.cpu+" | median of "+b.meta.runs+" runs. "+b.meta.note;
+ const z=b.sizes_bytes;
+ document.getElementById("sizes").innerHTML="<tr><th>Key share size (bytes)</th><th>X25519</th><th>ML-KEM-768</th><th>Hybrid</th></tr><tr><td>Client to server</td><td>"+z.x25519.client_share+"</td><td>"+z.ml_kem_768.client_share+"</td><td>"+z.hybrid_x25519mlkem768.client_share+"</td></tr><tr><td>Server to client</td><td>"+z.x25519.server_share+"</td><td>"+z.ml_kem_768.server_share+"</td><td>"+z.hybrid_x25519mlkem768.server_share+"</td></tr>";
+ const cat=document.getElementById("cat"),st=document.getElementById("st");
+ cat.innerHTML='<option value="">All categories</option>'+Object.keys(s.categories).map(k=>'<option value="'+k+'">'+esc(LABEL[k]||k)+'</option>').join("");
+ st.innerHTML='<option value="">All statuses</option>'+cols.map(c=>'<option>'+c+'</option>').join("");
+ const q=document.getElementById("q");
+ function draw(){
+  const rows=s.hosts.filter(r=>(!cat.value||r.category===cat.value)&&(!st.value||r.status===st.value)&&r.domain.toLowerCase().includes(q.value.toLowerCase()));
+  document.getElementById("hosts").innerHTML="<tr><th>Domain</th><th>Category</th><th>Status</th><th>Group</th></tr>"+rows.map(r=>"<tr><td>"+esc(r.domain)+"</td><td>"+esc(LABEL[r.category]||r.category)+'</td><td class="'+r.status+'">'+r.status+"</td><td>"+esc(r.group)+"</td></tr>").join("");
+ }
+ [q,cat,st].forEach(e=>e.addEventListener("input",draw));draw();
+}).catch(e=>{document.getElementById("headline").textContent="Could not load data: "+e;});
+</script>
+</body>
+</html>

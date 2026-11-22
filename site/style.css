@@ -1,0 +1,47 @@
+:root{--bg:#0b0f1e;--fg:#e9edf8;--mut:#98a2bd;--card:#131a30;--line:#25304d;--acc:#7fe7ff;--acc2:#6f7dff;--warn:#d9a05b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Iowan Old Style",Georgia,serif;font-weight:600;margin:0 0 8px}
+nav{position:sticky;top:0;z-index:20;display:flex;gap:4px;justify-content:center;flex-wrap:wrap;padding:10px;background:#0b0f1ecc;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav a{color:var(--mut);text-decoration:none;padding:6px 14px;border-radius:20px;transition:background .2s,color .2s}
+nav a:hover,nav a.on{background:var(--acc);color:#06101c}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.hero{position:relative;height:90vh;min-height:540px;display:grid;place-items:center;text-align:center;overflow:hidden}
+#hero{position:absolute;inset:0;width:100%;height:100%}
+.hero>div{position:relative;z-index:1;padding:0 18px;pointer-events:none}
+h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.1;max-width:15em;margin:0 auto}
+.big{font:600 clamp(3.2rem,11vw,6.5rem)/1 Georgia,serif;color:var(--acc);margin:14px 0 6px}
+.sub,.small{color:var(--mut)}.small{font-size:.86rem}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%}
+.hy{background:var(--acc)}.cl{background:var(--warn)}
+section{max-width:940px;margin:0 auto;padding:72px 18px 8px}
+h2{font-size:1.8rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.steps .card{margin:0;transition:transform .25s,border-color .25s}
+.steps .card:hover{transform:translateY(-5px);border-color:var(--acc)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.row{display:grid;grid-template-columns:190px 1fr 150px;gap:12px;align-items:center;width:100%;padding:10px 12px;margin:6px 0;background:none;border:1px solid transparent;border-radius:10px;color:inherit;font:inherit;text-align:left;cursor:pointer;transition:background .2s,border-color .2s}
+.row:hover{background:var(--card)}.row.on{border-color:var(--acc);background:var(--card)}
+.brow{display:grid;grid-template-columns:150px 1fr 90px;gap:12px;align-items:center;margin:8px 0}
+.track{position:relative;height:16px;background:var(--line);border-radius:8px;overflow:hidden}
+.fill{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--acc2),var(--acc));transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.in .fill{width:var(--w)}
+.ci{position:absolute;top:6px;height:4px;background:#fff;opacity:.75;border-radius:2px}
+#bench h3{text-transform:capitalize;margin-top:10px}
+.seg{display:flex;gap:6px;margin:8px 0 12px;flex-wrap:wrap}
+.seg button,.clear{background:none;border:1px solid var(--line);color:var(--fg);padding:6px 14px;border-radius:20px;font:inherit;cursor:pointer;transition:background .2s,border-color .2s}
+.seg button:hover,.clear:hover{border-color:var(--acc)}
+.seg button.on{background:var(--acc);color:#06101c;border-color:var(--acc)}
+input{padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font:inherit;margin-right:8px}
+.wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+.pqc_hybrid{color:var(--acc);font-weight:600}.classical_only{color:var(--warn)}
+.pqc_offer_rejected,.no_tls13{color:#ff7b7b}.unreachable,.timeout{color:var(--mut)}
+#tip{position:fixed;pointer-events:none;background:#050810ee;border:1px solid var(--line);padding:8px 10px;border-radius:8px;font-size:.84rem;opacity:0;transition:opacity .15s;z-index:30;max-width:260px}
+ul{padding-left:20px}
+@media (max-width:700px){.row,.brow{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}

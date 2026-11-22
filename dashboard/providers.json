@@ -1,0 +1,1894 @@
+{
+  "overall": {
+    "reachable": 253,
+    "hybrid": 137,
+    "hybrid_by_provider": {
+      "Google": 10,
+      "Cloudflare": 25,
+      "Meta": 6,
+      "Azure Front Door": 3,
+      "other/unidentified": 46,
+      "no_http_response": 14,
+      "CloudFront": 14,
+      "Akamai": 11,
+      "Fastly": 6,
+      "AWS": 1,
+      "Sucuri": 1
+    },
+    "all_by_provider": {
+      "Google": 10,
+      "Cloudflare": 25,
+      "Meta": 6,
+      "Azure Front Door": 8,
+      "other/unidentified": 127,
+      "no_http_response": 42,
+      "CloudFront": 14,
+      "Akamai": 11,
+      "AWS": 3,
+      "Fastly": 6,
+      "Sucuri": 1
+    },
+    "hybrid_via_known_provider_pct": 56.2
+  },
+  "categories": {
+    "global": {
+      "reachable": 112,
+      "hybrid": 70,
+      "hybrid_by_provider": {
+        "Google": 10,
+        "Cloudflare": 14,
+        "Meta": 6,
+        "Azure Front Door": 1,
+        "other/unidentified": 16,
+        "no_http_response": 9,
+        "CloudFront": 5,
+        "Akamai": 3,
+        "Fastly": 6
+      },
+      "all_by_provider": {
+        "Google": 10,
+        "Cloudflare": 14,
+        "Meta": 6,
+        "Azure Front Door": 6,
+        "other/unidentified": 46,
+        "no_http_response": 15,
+        "CloudFront": 5,
+        "Akamai": 3,
+        "AWS": 1,
+        "Fastly": 6
+      },
+      "hybrid_via_known_provider_pct": 64.3
+    },
+    "india_bank": {
+      "reachable": 47,
+      "hybrid": 32,
+      "hybrid_by_provider": {
+        "Cloudflare": 11,
+        "other/unidentified": 11,
+        "Akamai": 3,
+        "AWS": 1,
+        "CloudFront": 5,
+        "no_http_response": 1
+      },
+      "all_by_provider": {
+        "other/unidentified": 21,
+        "Cloudflare": 11,
+        "Akamai": 3,
+        "AWS": 1,
+        "CloudFront": 5,
+        "no_http_response": 6
+      },
+      "hybrid_via_known_provider_pct": 62.5
+    },
+    "india_gov": {
+      "reachable": 45,
+      "hybrid": 26,
+      "hybrid_by_provider": {
+        "other/unidentified": 13,
+        "no_http_response": 3,
+        "Akamai": 5,
+        "CloudFront": 4,
+        "Azure Front Door": 1
+      },
+      "all_by_provider": {
+        "other/unidentified": 26,
+        "no_http_response": 8,
+        "Akamai": 5,
+        "CloudFront": 4,
+        "Azure Front Door": 1,
+        "AWS": 1
+      },
+      "hybrid_via_known_provider_pct": 38.5
+    },
+    "india_univ": {
+      "reachable": 49,
+      "hybrid": 9,
+      "hybrid_by_provider": {
+        "other/unidentified": 6,
+        "Azure Front Door": 1,
+        "no_http_response": 1,
+        "Sucuri": 1
+      },
+      "all_by_provider": {
+        "other/unidentified": 34,
+        "no_http_response": 13,
+        "Azure Front Door": 1,
+        "Sucuri": 1
+      },
+      "hybrid_via_known_provider_pct": 22.2
+    }
+  },
+  "hosts": [
+    {
+      "domain": "google.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "gws"
+    },
+    {
+      "domain": "cloudflare.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "facebook.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Meta",
+      "server_header": ""
+    },
+    {
+      "domain": "fbcdn.net",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Meta",
+      "server_header": ""
+    },
+    {
+      "domain": "microsoft.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Azure Front Door",
+      "server_header": ""
+    },
+    {
+      "domain": "youtube.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "ESF"
+    },
+    {
+      "domain": "apple.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "instagram.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Meta",
+      "server_header": ""
+    },
+    {
+      "domain": "linkedin.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "ESF"
+    },
+    {
+      "domain": "twitter.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare envoy"
+    },
+    {
+      "domain": "googlevideo.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "appsflyersdk.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "CloudFront"
+    },
+    {
+      "domain": "googletagmanager.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "Google Tag Manager"
+    },
+    {
+      "domain": "mail.ru",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.30.7"
+    },
+    {
+      "domain": "office.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "Azure Front Door",
+      "server_header": ""
+    },
+    {
+      "domain": "amazon.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Server"
+    },
+    {
+      "domain": "triplinkintl.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "live.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "Azure Front Door",
+      "server_header": ""
+    },
+    {
+      "domain": "sharepoint.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "Azure Front Door",
+      "server_header": ""
+    },
+    {
+      "domain": "cloud.microsoft",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Kestrel"
+    },
+    {
+      "domain": "github.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "github.com"
+    },
+    {
+      "domain": "dzen.ru",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "wikipedia.org",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "netflix.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "envoy"
+    },
+    {
+      "domain": "whatsapp.net",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Meta",
+      "server_header": "proxygen-bolt"
+    },
+    {
+      "domain": "bing.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "Azure Front Door",
+      "server_header": ""
+    },
+    {
+      "domain": "x.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare envoy"
+    },
+    {
+      "domain": "googlesyndication.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "sffe"
+    },
+    {
+      "domain": "youtu.be",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "ESF"
+    },
+    {
+      "domain": "pinterest.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "icloud.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "AppleHttpServer/382f421f086b"
+    },
+    {
+      "domain": "cloudflare.net",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "zoom.us",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "adobe.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": "AkamaiGHost"
+    },
+    {
+      "domain": "skype.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Kestrel"
+    },
+    {
+      "domain": "whatsapp.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Meta",
+      "server_header": "proxygen-bolt"
+    },
+    {
+      "domain": "gandi.net",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Varnish"
+    },
+    {
+      "domain": "wordpress.org",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "digicert.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "googledomains.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "sffe"
+    },
+    {
+      "domain": "myfritz.net",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "wa.me",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Meta",
+      "server_header": ""
+    },
+    {
+      "domain": "yahoo.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "ATS"
+    },
+    {
+      "domain": "spotify.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "envoy"
+    },
+    {
+      "domain": "epicgames.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "AWS",
+      "server_header": "awselb/2.0"
+    },
+    {
+      "domain": "amazonvideo.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "AmazonS3"
+    },
+    {
+      "domain": "opera.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "nginx"
+    },
+    {
+      "domain": "b-cdn.net",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "BunnyCDN-SG1-749"
+    },
+    {
+      "domain": "roblox.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "vimeo.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "ntp.org",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "tiktokv.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": "TLB"
+    },
+    {
+      "domain": "workers.dev",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "blogspot.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "sffe"
+    },
+    {
+      "domain": "intuit.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": "AkamaiGHost"
+    },
+    {
+      "domain": "mozilla.org",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "nginx"
+    },
+    {
+      "domain": "nginx.org",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "f5.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "volt-adc"
+    },
+    {
+      "domain": "msn.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "Azure Front Door",
+      "server_header": ""
+    },
+    {
+      "domain": "wordpress.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "t-online.de",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "nginx.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "sentry.io",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "nginx"
+    },
+    {
+      "domain": "ui.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": ""
+    },
+    {
+      "domain": "chatgpt.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "europa.eu",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "reddit.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "snooserv"
+    },
+    {
+      "domain": "yandex.ru",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "lencr.org",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "aliyuncs.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Tengine"
+    },
+    {
+      "domain": "bit.ly",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "webex.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "Webex"
+    },
+    {
+      "domain": "samsung.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "yandex.net",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "openai.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "registrar-servers.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "namecheap-web"
+    },
+    {
+      "domain": "office365.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "adobe.io",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "openresty/1.29.2.4"
+    },
+    {
+      "domain": "windows.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Kestrel"
+    },
+    {
+      "domain": "github.io",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Fastly",
+      "server_header": "Varnish"
+    },
+    {
+      "domain": "nih.gov",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "BigIP"
+    },
+    {
+      "domain": "dropbox.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "envoy"
+    },
+    {
+      "domain": "outlook.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "Microsoft-HTTPAPI/2.0"
+    },
+    {
+      "domain": "android.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "sffe"
+    },
+    {
+      "domain": "cloudflare-dns.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "duckdns.org",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.30.3"
+    },
+    {
+      "domain": "apache.org",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Fastly",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "nic.ru",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "31.177.76.4"
+    },
+    {
+      "domain": "archive.org",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.26.3"
+    },
+    {
+      "domain": "ipify.org",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "forms.gle",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Fastly",
+      "server_header": ""
+    },
+    {
+      "domain": "tumblr.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "okcdn.ru",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "crashlytics.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Google",
+      "server_header": "sffe"
+    },
+    {
+      "domain": "nytimes.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Fastly",
+      "server_header": "Varnish"
+    },
+    {
+      "domain": "samsungcloud.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "AmazonS3"
+    },
+    {
+      "domain": "meraki.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "AmazonS3"
+    },
+    {
+      "domain": "shopify.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "discord.gg",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "ubuntu.com",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.14.0 (Ubuntu)"
+    },
+    {
+      "domain": "telegram.org",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.30.7"
+    },
+    {
+      "domain": "gravatar.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "snapchat.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "pages.dev",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "trbcdn.net",
+      "category": "global",
+      "status": "no_tls13",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "vk.com",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "kittenx"
+    },
+    {
+      "domain": "google-analytics.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "Golfe2"
+    },
+    {
+      "domain": "telekom.net",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "creativecommons.org",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "firefox-portal-detection.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Fastly",
+      "server_header": "Varnish"
+    },
+    {
+      "domain": "reg.ru",
+      "category": "global",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "194.67.72.31"
+    },
+    {
+      "domain": "cnn.com",
+      "category": "global",
+      "status": "pqc_hybrid",
+      "provider": "Fastly",
+      "server_header": ""
+    },
+    {
+      "domain": "www.india.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.mygov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.irctc.co.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.incometax.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": ""
+    },
+    {
+      "domain": "www.uidai.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.digilocker.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "DigiLocker"
+    },
+    {
+      "domain": "www.isro.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.rbi.org.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "Azure Front Door",
+      "server_header": ""
+    },
+    {
+      "domain": "www.sebi.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.passportindia.gov.in",
+      "category": "india_gov",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.epfindia.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "AWS",
+      "server_header": "awselb/2.0"
+    },
+    {
+      "domain": "www.gst.gov.in",
+      "category": "india_gov",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.meity.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.drdo.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.parivahan.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.umang.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "CloudFront"
+    },
+    {
+      "domain": "www.tn.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "nginx"
+    },
+    {
+      "domain": "www.kerala.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.delhi.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "\"OFF\""
+    },
+    {
+      "domain": "www.cert-in.org.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitm.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitb.ac.in",
+      "category": "india_univ",
+      "status": "no_tls13",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitd.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitkgp.ac.in",
+      "category": "india_univ",
+      "status": "pqc_offer_rejected",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iisc.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.annauniv.edu",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.nitt.edu",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "Apache/2.4.63 (Red Hat Enterprise Linux) OpenSSL/3.5.5"
+    },
+    {
+      "domain": "www.nitk.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "nginx"
+    },
+    {
+      "domain": "www.du.ac.in",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.jnu.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.bits-pilani.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache/2.4.41 (Ubuntu)"
+    },
+    {
+      "domain": "www.vit.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.srmist.edu.in",
+      "category": "india_univ",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.24.0 (Ubuntu)"
+    },
+    {
+      "domain": "www.amrita.edu",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "LiteSpeed"
+    },
+    {
+      "domain": "www.manipal.edu",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "Azure Front Door",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iiit.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.onlinesbi.sbi",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.hdfcbank.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.icicibank.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.axisbank.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": "AkamaiGHost"
+    },
+    {
+      "domain": "www.kotak.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.pnbindia.in",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.bankofbaroda.in",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.canarabank.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "AWS",
+      "server_header": "awselb/2.0"
+    },
+    {
+      "domain": "www.indusind.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "volt-adc"
+    },
+    {
+      "domain": "www.yesbank.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.idfcfirstbank.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": ""
+    },
+    {
+      "domain": "www.federalbank.co.in",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "rdwr"
+    },
+    {
+      "domain": "www.npci.org.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "razorpay.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "CloudFront"
+    },
+    {
+      "domain": "paytm.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "phonepe.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.mha.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.mea.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": ""
+    },
+    {
+      "domain": "www.pib.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.dst.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": ""
+    },
+    {
+      "domain": "www.education.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": "APISIX"
+    },
+    {
+      "domain": "www.mohfw.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": "APISIX"
+    },
+    {
+      "domain": "www.nic.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.data.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.eci.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "v/7.0.6/6.6.9/v133maa1-www"
+    },
+    {
+      "domain": "www.ecourts.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.sansad.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.niti.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.cbic.gov.in",
+      "category": "india_gov",
+      "status": "no_tls13",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.mca.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.myscheme.gov.in",
+      "category": "india_gov",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.pmindia.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": "AkamaiGHost"
+    },
+    {
+      "domain": "rajasthan.gov.in",
+      "category": "india_gov",
+      "status": "no_tls13",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.wb.gov.in",
+      "category": "india_gov",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "Microsoft-IIS/10.0"
+    },
+    {
+      "domain": "www.telangana.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.odisha.gov.in",
+      "category": "india_gov",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.tnpsc.gov.in",
+      "category": "india_gov",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.ugc.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": ""
+    },
+    {
+      "domain": "www.cbse.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.dot.gov.in",
+      "category": "india_gov",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.trai.gov.in",
+      "category": "india_gov",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitk.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.iitr.ac.in",
+      "category": "india_univ",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.18.0 (Ubuntu)"
+    },
+    {
+      "domain": "www.iitg.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "IITGServer"
+    },
+    {
+      "domain": "www.iith.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitbhu.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache/2.4.58 (Ubuntu)"
+    },
+    {
+      "domain": "www.iitism.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitgn.ac.in",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitj.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iitp.ac.in",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.31.4"
+    },
+    {
+      "domain": "www.iitmandi.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "IITM "
+    },
+    {
+      "domain": "www.iitrpr.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "nginx"
+    },
+    {
+      "domain": "www.iitbbs.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.iiti.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache/2.4.52 (Ubuntu)"
+    },
+    {
+      "domain": "www.nitw.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "nginx/1.18.0 (Ubuntu)"
+    },
+    {
+      "domain": "www.nitc.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.nitrkl.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.mnit.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.vnit.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "nitdgp.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iiita.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.iiitb.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/7.4.30"
+    },
+    {
+      "domain": "www.iiitd.ac.in",
+      "category": "india_univ",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips PHP/5.4.16 mod_wsgi/3.4 Python/2.7.5"
+    },
+    {
+      "domain": "www.bhu.ac.in",
+      "category": "india_univ",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.amu.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.jmi.ac.in",
+      "category": "india_univ",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "Microsoft-IIS/10.0"
+    },
+    {
+      "domain": "www.uohyd.ac.in",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "nginx"
+    },
+    {
+      "domain": "www.unipune.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Microsoft-IIS/10.0"
+    },
+    {
+      "domain": "www.caluniv.ac.in",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "Sucuri",
+      "server_header": "Sucuri/Cloudproxy"
+    },
+    {
+      "domain": "www.sastra.edu",
+      "category": "india_univ",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "Microsoft-IIS/7.5"
+    },
+    {
+      "domain": "www.citchennai.net",
+      "category": "india_univ",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "ip-100-74-5-72.eu-west-2.compute.internal"
+    },
+    {
+      "domain": "www.christuniversity.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.isical.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "nginx"
+    },
+    {
+      "domain": "www.iiserpune.ac.in",
+      "category": "india_univ",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.bankofindia.co.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.centralbankofindia.co.in",
+      "category": "india_bank",
+      "status": "no_tls13",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.indianbank.in",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.iob.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "ip-100-74-4-125.eu-west-2.compute.internal"
+    },
+    {
+      "domain": "www.ucobank.com",
+      "category": "india_bank",
+      "status": "no_tls13",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.sbi.co.in",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.rblbank.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.bandhanbank.com",
+      "category": "india_bank",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": "BigIP"
+    },
+    {
+      "domain": "www.aubank.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.equitasbank.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "volt-adc"
+    },
+    {
+      "domain": "www.csb.co.in",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.dcbbank.com",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "other/unidentified",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.tmb.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "ip-100-74-5-59.eu-west-2.compute.internal"
+    },
+    {
+      "domain": "www.southindianbank.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.jkbank.com",
+      "category": "india_bank",
+      "status": "no_tls13",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.idbibank.in",
+      "category": "india_bank",
+      "status": "classical_only",
+      "provider": "no_http_response",
+      "server_header": ""
+    },
+    {
+      "domain": "www.hsbc.co.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.dbs.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.sbicard.com",
+      "category": "india_bank",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    },
+    {
+      "domain": "www.cred.club",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": ""
+    },
+    {
+      "domain": "www.groww.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.zerodha.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.upstox.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "awselb/2.0"
+    },
+    {
+      "domain": "www.bharatpe.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "CloudFront",
+      "server_header": "CloudFront"
+    },
+    {
+      "domain": "www.mobikwik.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": "cloudflare"
+    },
+    {
+      "domain": "www.freecharge.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "FreeCharge"
+    },
+    {
+      "domain": "www.policybazaar.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Akamai",
+      "server_header": "Apache"
+    },
+    {
+      "domain": "www.bajajfinserv.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "Origin"
+    },
+    {
+      "domain": "www.licindia.in",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "other/unidentified",
+      "server_header": "v/7.0.6/6.6.9/v110maa1-www"
+    },
+    {
+      "domain": "www.cashfree.com",
+      "category": "india_bank",
+      "status": "pqc_hybrid",
+      "provider": "Cloudflare",
+      "server_header": ""
+    },
+    {
+      "domain": "www.billdesk.com",
+      "category": "india_bank",
+      "status": "no_tls13",
+      "provider": "other/unidentified",
+      "server_header": ""
+    }
+  ]
+}

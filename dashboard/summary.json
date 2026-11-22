@@ -1,0 +1,1916 @@
+{
+  "overall": {
+    "total": 304,
+    "reachable": 253,
+    "tls13_ok": 216,
+    "pqc_hybrid": 137,
+    "classical_only": 78,
+    "pqc_offer_rejected": 1,
+    "no_tls13": 37,
+    "unreachable": 51,
+    "timeout": 0,
+    "pct_of_reachable": 54.2,
+    "ci95": [
+      48.0,
+      60.2
+    ],
+    "pct_of_tls13": 63.4
+  },
+  "categories": {
+    "global": {
+      "total": 150,
+      "reachable": 112,
+      "tls13_ok": 96,
+      "pqc_hybrid": 70,
+      "classical_only": 26,
+      "pqc_offer_rejected": 0,
+      "no_tls13": 16,
+      "unreachable": 38,
+      "timeout": 0,
+      "pct_of_reachable": 62.5,
+      "ci95": [
+        53.3,
+        70.9
+      ],
+      "pct_of_tls13": 72.9
+    },
+    "india_bank": {
+      "total": 50,
+      "reachable": 47,
+      "tls13_ok": 41,
+      "pqc_hybrid": 32,
+      "classical_only": 9,
+      "pqc_offer_rejected": 0,
+      "no_tls13": 6,
+      "unreachable": 3,
+      "timeout": 0,
+      "pct_of_reachable": 68.1,
+      "ci95": [
+        53.8,
+        79.6
+      ],
+      "pct_of_tls13": 78.0
+    },
+    "india_gov": {
+      "total": 53,
+      "reachable": 45,
+      "tls13_ok": 37,
+      "pqc_hybrid": 26,
+      "classical_only": 11,
+      "pqc_offer_rejected": 0,
+      "no_tls13": 8,
+      "unreachable": 8,
+      "timeout": 0,
+      "pct_of_reachable": 57.8,
+      "ci95": [
+        43.3,
+        71.0
+      ],
+      "pct_of_tls13": 70.3
+    },
+    "india_univ": {
+      "total": 51,
+      "reachable": 49,
+      "tls13_ok": 42,
+      "pqc_hybrid": 9,
+      "classical_only": 32,
+      "pqc_offer_rejected": 1,
+      "no_tls13": 7,
+      "unreachable": 2,
+      "timeout": 0,
+      "pct_of_reachable": 18.4,
+      "ci95": [
+        10.0,
+        31.4
+      ],
+      "pct_of_tls13": 21.4
+    }
+  },
+  "hosts": [
+    {
+      "category": "global",
+      "domain": "google.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "cloudflare.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "facebook.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "ezviz7.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "fbcdn.net",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "microsoft.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "youtube.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "apple.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "instagram.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "hicloudcam.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "linkedin.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "twitter.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "domaincontrol.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "googlevideo.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "appsflyersdk.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "googletagmanager.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "mail.ru",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "office.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "amazon.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "triplinkintl.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "live.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "sharepoint.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "gwfb.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "aaplimg.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "cloud.microsoft",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "github.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "dzen.ru",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "w2rt6byl5nf1opmc-a.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "wikipedia.org",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "netflix.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "whatsapp.net",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "bing.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "x.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "pv-cdn.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "lsrelayaccess.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "googlesyndication.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "youtu.be",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "pinterest.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "icloud.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "cloudflare.net",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "zoom.us",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "adobe.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "goo.gl",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "skype.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "tiktok.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "windowsupdate.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "whatsapp.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "gvt1.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "gandi.net",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "wordpress.org",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "digicert.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "googledomains.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "myfritz.net",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "wa.me",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "yahoo.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "tiktokcdn.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "a2z.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "spotify.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "epicgames.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "h264.io",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "amazonvideo.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "opera.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "b-cdn.net",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "roblox.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "vimeo.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "ntp.org",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "3gppnetwork.org",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "tiktokv.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "aws.dev",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "qq.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "baidu.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "workers.dev",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "blogspot.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "intuit.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "mozilla.org",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "nginx.org",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "cdn77.org",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "f5.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "msn.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "wordpress.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "cdninstagram.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "t-online.de",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "nginx.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "t.me",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "sentry.io",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "akam.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "edgesuite.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "2mdn.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "ui.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "chatgpt.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "europa.eu",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "reddit.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "yandex.ru",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "lencr.org",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "gvt2.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "aliyuncs.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "bit.ly",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "amazon.dev",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "webex.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "samsung.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "yandex.net",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "openai.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "registrar-servers.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "office365.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "adobe.io",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "windows.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "github.io",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "nih.gov",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "dropbox.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "ytimg.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "static.microsoft",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "outlook.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "android.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "nflxso.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "cloudflare-dns.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "duckdns.org",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "virginm.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "apache.org",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "dns-parking.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "dotaplabs.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "nic.ru",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "archive.org",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "ipify.org",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "forms.gle",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "tumblr.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "okcdn.ru",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "jomodns.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "crashlytics.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "nytimes.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "samsungcloud.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "meraki.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "shopify.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "discord.gg",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "ubuntu.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "telegram.org",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "gravatar.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "dnsowl.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "snapchat.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "pages.dev",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "ksyuncdn.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "trbcdn.net",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "vk.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "spo-msedge.net",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "global",
+      "domain": "google-analytics.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "telekom.net",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "creativecommons.org",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "firefox-portal-detection.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "reg.ru",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "global",
+      "domain": "cnn.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "global",
+      "domain": "amazon-adsystem.com",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.india.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.mygov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.irctc.co.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.incometax.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.uidai.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.digilocker.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.isro.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.rbi.org.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.sebi.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.passportindia.gov.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.epfindia.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.gst.gov.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.meity.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.drdo.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.parivahan.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.umang.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.tn.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.kerala.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.delhi.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.cert-in.org.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitm.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitb.ac.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitd.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitkgp.ac.in",
+      "status": "pqc_offer_rejected",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iisc.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.annauniv.edu",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.nitt.edu",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.nitk.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.du.ac.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.jnu.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.bits-pilani.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.vit.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.srmist.edu.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.amrita.edu",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.manipal.edu",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iiit.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.onlinesbi.sbi",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.hdfcbank.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.icicibank.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.axisbank.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.kotak.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.pnbindia.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.bankofbaroda.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.canarabank.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.indusind.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.yesbank.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.idfcfirstbank.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.federalbank.co.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.npci.org.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "razorpay.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "paytm.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "phonepe.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.mha.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.mea.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.pib.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.dst.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.education.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.mohfw.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.morth.nic.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.nic.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.data.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.eci.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.ecourts.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.sansad.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.niti.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.cbic.gov.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.mca.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.myscheme.gov.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.pmindia.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.maharashtra.gov.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.karnataka.gov.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.up.gov.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.gujarat.gov.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "rajasthan.gov.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.wb.gov.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.telangana.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.punjab.gov.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.bihar.gov.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.odisha.gov.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.tnpsc.gov.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.ugc.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.cbse.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.imd.gov.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.dot.gov.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_gov",
+      "domain": "www.trai.gov.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitk.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitr.ac.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitg.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iith.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitbhu.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitism.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitgn.ac.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitj.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitp.ac.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitmandi.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitrpr.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iitbbs.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iiti.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.nitw.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.nitc.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.nitrkl.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.mnit.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.vnit.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "nitdgp.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iiita.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iiitb.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iiitd.ac.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.bhu.ac.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.amu.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.jmi.ac.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.uohyd.ac.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.unipune.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.mu.ac.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.caluniv.ac.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.sastra.edu",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.psgtech.edu",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.citchennai.net",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.christuniversity.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.isical.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_univ",
+      "domain": "www.iiserpune.ac.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.unionbankofindia.co.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.bankofindia.co.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.centralbankofindia.co.in",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.indianbank.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.iob.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.ucobank.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_bank",
+      "domain": "bankofmaharashtra.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.sbi.co.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.rblbank.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.bandhanbank.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.aubank.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.equitasbank.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.csb.co.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.dcbbank.com",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.kvb.co.in",
+      "status": "unreachable",
+      "group": ""
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.tmb.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.southindianbank.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.jkbank.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.idbibank.in",
+      "status": "classical_only",
+      "group": "X25519"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.hsbc.co.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.dbs.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.sbicard.com",
+      "status": "no_tls13",
+      "group": ""
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.cred.club",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.groww.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.zerodha.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.upstox.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.bharatpe.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.mobikwik.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.freecharge.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.policybazaar.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.bajajfinserv.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.licindia.in",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.cashfree.com",
+      "status": "pqc_hybrid",
+      "group": "X25519MLKEM768"
+    },
+    {
+      "category": "india_bank",
+      "domain": "www.billdesk.com",
+      "status": "no_tls13",
+      "group": ""
+    }
+  ],
+  "scanned_at": "2026-11-22T16:13:31+00:00"
+}

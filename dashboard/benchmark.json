@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "openssl": "OpenSSL 3.5.9 29 Sep 2026 (Library: OpenSSL 3.5.9 29 Sep 2026)",
+    "cpu": "AMD Ryzen 7 7840U w/ Radeon(TM) 780M Graphics",
+    "runs": 3,
+    "seconds_per_run": 2,
+    "measured_at": "2026-11-22T10:49:19+00:00",
+    "note": "Docker on WSL2; median of runs; x25519 side costs approximated as 2 scalar mults."
+  },
+  "speed": {
+    "ml_kem_768": {
+      "keygen_ops_s": 20975.6,
+      "encaps_ops_s": 26628.5,
+      "decaps_ops_s": 17718.5,
+      "keygen_us": 47.7,
+      "encaps_us": 37.6,
+      "decaps_us": 56.4
+    },
+    "x25519": {
+      "scalar_mult_ops_s": 40213.0,
+      "scalar_mult_us": 24.9
+    }
+  },
+  "handshake_cost_us": {
+    "x25519_client": 49.7,
+    "x25519_server": 49.7,
+    "ml_kem_768_client": 104.1,
+    "ml_kem_768_server": 37.6,
+    "hybrid_client": 153.8,
+    "hybrid_server": 87.3
+  },
+  "sizes_bytes": {
+    "x25519": {
+      "client_share": 32,
+      "server_share": 32
+    },
+    "ml_kem_768": {
+      "client_share": 1184,
+      "server_share": 1088
+    },
+    "hybrid_x25519mlkem768": {
+      "client_share": 1216,
+      "server_share": 1120
+    }
+  }
+}
